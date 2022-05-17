@@ -11,64 +11,137 @@
 */
 
 :root {
-  --black: #1a1a1a;
-  --white: #f0f8ff;
+    --black: #101010;
+    --white: #f0f8ff;
+    --font: sans-serif;
+
 }
 
 body,
-head {
-  margin: 0;
-  font-family: sans-serif;
+html {
+    margin: 0;
+    overflow: hidden;
+
+    font-family: var(--font);
 }
 
-/* TOP LOGO SECTION */
 
-.topSection {
+*::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* MAIN */
+
+main {
+    height: 100vh;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* BLOCK */
+
+.block {
     position: relative;
 
     width: 100vw;
     height: 100vh;
 
+    scroll-snap-align: start;
+}
+
+
+/* TOP */
+
+.top {
     background-color: var(--black);
     color: var(--white);
 }
 
-.topSection > div{
+.top>div {
     position: absolute;
+
     top: 50%;
     left: 50%;
+    -ms-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
-
-    width: 100%;
-
-    text-align: center;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+.top>div>img {
+    width: 200px;
 
-.topSection > div > img {
-    width: 300px;
-
-    margin-inline: auto;
+    animation-name: logoAppear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    z-index: 1;
 }
 
-.topSection > div > h1
-{
-    width: 420px;
+.top>div>div {
+    margin-left: 25px;
 
-    margin-inline: auto;
+    animation-name: TextAppear;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
 }
 
-.topSection > div > h1 {
-    font-size: 50px;
+.top>div>div>h1 {
+    font-size: 80px;
+    margin-bottom: 0px;
 }
 
-.topSection > div > h1:first-line {
-    font-size: 100px;
+.top>div>div>h2 {
+    font-size: 30px;
+    margin-top: 0px;
 }
 
+@keyframes logoAppear {
+    0% {
+        transform: translateX(150px) scale(1.2);
+    }
+
+    30% {
+        transform: translateX(150px) scale(1);
+    }
+}
+
+@keyframes TextAppear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 843px) {
+    .top>div {
+        flex-direction: column;
+    }
+
+    .top>div>div {
+        margin-left: 0px;
+    }
+
+    @keyframes logoAppear {
+        0% {
+            transform: translateY(150px) scale(1.2);
+        }
+
+        30% {
+            transform: translateY(150px) scale(1);
+        }
+    }
 
 
+}
