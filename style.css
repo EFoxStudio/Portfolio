@@ -13,7 +13,8 @@
 :root {
     --black: #101010;
     --white: #f0f8ff;
-    --font: sans-serif;
+    --grey: #b0b0b0;
+    --font: 'Source Sans Pro', sans-serif;
 
 }
 
@@ -35,6 +36,36 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+a,
+a:visited {
+    color: var(--white);
+    text-decoration: none;
+
+    transition: 0.4s;
+}
+
+a:hover {
+    cursor: pointer;
+    color: var(--grey);
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--black);
+    background-image: url('img/BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 
 /* MAIN */
 
@@ -60,11 +91,50 @@ main {
 /* TOP */
 
 .top {
-    background-color: var(--black);
     color: var(--white);
 }
 
-.top>div {
+.top>header {
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.top>header>a {
+    margin-inline: 35px;
+
+    animation-name: headerFadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.top>header>a:not(:first-of-type) {
+    float: right;
+}
+
+.top>header>a:first-of-type {
+    font-size: 40px;
+}
+
+
+@keyframes headerFadeIn {
+
+    0% {
+        opacity: 0;
+
+    }
+
+
+
+    70% {
+        opacity: 0;
+    }
+
+
+}
+
+
+
+.top>div:first-of-type {
     position: absolute;
 
     top: 50%;
@@ -75,9 +145,12 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+
+    z-index: 10;
 }
 
-.top>div>img {
+.top>div:first-of-type>img {
     width: 200px;
 
     animation-name: logoAppear;
@@ -86,26 +159,26 @@ main {
     z-index: 1;
 }
 
-.top>div>div {
+.top>div:first-of-type>div {
     margin-left: 25px;
     overflow: hidden;
     width: 195.59px;
     height: 262.28px;
 }
 
-.top>div>div>h1,
+.top>div:first-of-type>div>h1,
 h2 {
     animation-name: TextAppear;
     animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
-.top>div>div>h1 {
+.top>div:first-of-type>div>h1 {
     font-size: 80px;
     margin-bottom: 0px;
 }
 
-.top>div>div>h2 {
+.top>div:first-of-type>div>h2 {
     font-size: 30px;
     margin-top: 0px;
 }
@@ -138,6 +211,62 @@ h2 {
     }
 }
 
+
+.top>div:last-child {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+
+    width: 200px;
+    height: 200px;
+
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    animation-name: ScrollAppear;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+
+    z-index: 9;
+}
+
+.top>div:last-child>div:last-child {
+    flex-grow: 1;
+}
+
+.top>div:last-child>div>hr {
+    width: 80%;
+    margin-left: 12px;
+
+}
+
+@keyframes ScrollAppear {
+
+    0% {
+        opacity: 0;
+
+    }
+
+    75% {
+        opacity: 0;
+        margin-bottom: -100px;
+    }
+
+    90% {
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+
+
 @media only screen and (max-width: 843px) {
     .top>div {
         flex-direction: column;
@@ -168,6 +297,11 @@ h2 {
             opacity: 0;
             margin-top: -100px;
         }
+    }
+
+    .top>div:last-child {
+        left: 90%;
+
     }
 
 
