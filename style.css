@@ -517,7 +517,6 @@ main {
 .block:nth-of-type(2)>div:last-child>a:hover {
     border: 5px solid var(--white);
     color: var(--white);
-    padding-block: 5px;
     padding-inline: 20px;
 }
 
@@ -570,6 +569,8 @@ main {
 #ProjectsCards {
     --size: 500px;
 
+    border-radius: 15px;
+
     width: var(--size);
 
     position: relative;
@@ -606,13 +607,21 @@ main {
 }
 
 #ProjectsCards>div:first-child>img:first-child {
-    margin-left: 15px;
+    margin-left: 20px;
+}
+
+#ProjectsCards>div:first-child>img:first-child:hover {
+    transform: translateX(-20%);
 }
 
 #ProjectsCards>div:first-child>img:last-child {
     margin-right: 15px;
-    margin-left: 415px;
+    margin-left: 405px;
     transform: rotate(180deg);
+}
+
+#ProjectsCards>div:first-child>img:last-child:hover {
+    transform: rotate(180deg) translateX(-18%);
 }
 
 #ProjectsCards>div:not(:first-child) {
@@ -620,31 +629,145 @@ main {
     flex: 0 0 auto;
     width: var(--size);
     height: var(--size);
+    margin-left: 1px;
+
+    text-align: center;
+    color: var(--white);
+}
+
+#ProjectsCards>div:not(:first-child)>h3 {
+    font-size: 35px;
+    margin-bottom: 0;
+}
+
+#ProjectsCards>div:not(:first-child)>p {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+#ProjectsCards>div:not(:first-child)>img {
+    height: 150px;
+    margin-top: 50px;
+    object-fit: contain;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+
+#ProjectsCards>div:not(:first-child)>img:hover {
+    cursor: pointer;
 }
 
 #ProjectsCards>div:nth-child(2) {
-    background-color: red;
+    background-color: #34495e;
 }
 
 #ProjectsCards>div:nth-child(3) {
-    background-color: rgb(149, 0, 0);
+    background-color: #bae2b4;
+}
+
+#ProjectsCards>div:nth-child(3)>img {
+    border-radius: 15px;
 }
 
 #ProjectsCards>div:nth-child(4) {
-    background-color: rgb(98, 0, 0);
+    background-color: #fea500;
 }
 
-#ProjectsCards>div:nth-child(5) {
-    background-color: rgb(0, 0, 0);
+#ProjectsCards>div:nth-child(4)>img {
+    border-radius: 15px;
 }
 
 
 @media only screen and (max-width: 843px) {
     #ProjectsCards {
-        --size: 300px;
+        --size: 200px;
     }
 
     #ProjectsCards>div:first-child>img:last-child {
-        margin-left: 215px;
+        margin-left: 115px;
     }
+
+    #ProjectsCards>div:not(:first-child)>img {
+        height: 50px;
+        margin-top: 10px;
+        object-fit: contain;
+    }
+}
+
+/* projects text */
+
+.block:nth-of-type(3)>div:last-child {
+    margin-top: 5px;
+    color: var(--white);
+    text-align: center;
+}
+
+.block:nth-of-type(3)>div:last-child>h2 {
+    font-size: 80px;
+    margin-block: 10px;
+}
+
+.block:nth-of-type(3)>div:last-child>div:nth-of-type(1) {
+
+    background-color: var(--orange);
+    box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
+
+    width: 150px;
+    height: 10px;
+
+    transform: translateX(30%);
+    margin-inline: auto;
+
+    border-radius: 100px;
+}
+
+.block:nth-of-type(3)>div:last-child>div:nth-of-type(2) {
+
+    background-color: var(--orange);
+    box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
+
+    width: 150px;
+    height: 10px;
+
+    margin-inline: auto;
+    transform: translateX(-30%);
+    margin-top: 15px;
+
+    clear: both;
+
+    border-radius: 100px;
+}
+
+.block:nth-of-type(3)>div:last-child>p {
+    font-size: 25px;
+    clear: both;
+}
+
+@media only screen and (max-width: 843px) {
+
+    #ProjectsCards>div:first-child {
+        display: none;
+    }
+
+    #ProjectsCards>div:not(:first-child)>h3 {
+        font-size: 25px;
+        margin-bottom: 0;
+    }
+
+    #ProjectsCards>div:not(:first-child)>p {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .block:nth-of-type(3)>div:last-child>h2 {
+        font-size: 50px;
+    }
+
+    .block:nth-of-type(3)>div:last-child>p {
+        font-size: 15px;
+        clear: both;
+    }
+
+
 }
