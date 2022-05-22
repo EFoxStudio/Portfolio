@@ -49,7 +49,22 @@ function CurrentPageIndicator() {
             currentPageIndicator = newIndicator;
         }
     }
+}
 
 
 
+
+function ScrollLeft() {
+    var ProjectsCards = document.getElementById("ProjectsCards");
+    ProjectsCards.scrollTo({
+        left: ProjectsCards.scrollLeft - ProjectsCards.offsetWidth,
+        behavior: 'smooth',
+    });
+}
+function ScrollRight() {
+    var ProjectsCards = document.getElementById("ProjectsCards");
+    ProjectsCards.scrollTo({
+        left: ProjectsCards.scrollLeft + ProjectsCards.offsetWidth,
+        behavior: 'smooth',
+    });
 }

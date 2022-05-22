@@ -62,7 +62,7 @@ header>a:hover {
 
 .overlay>div {
     position: absolute;
-    top: 50%;
+    top: 51%;
     right: 0%;
     transform: translateY(-50%);
 
@@ -567,34 +567,84 @@ main {
     margin-inline: auto;
 }
 
-.block:nth-of-type(3)>div:first-child {
+#ProjectsCards {
+    --size: 500px;
+
+    width: var(--size);
+
+    position: relative;
     scroll-snap-type: x mandatory;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     white-space: nowrap;
     overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.block:nth-of-type(3)>div:first-child>div {
+#ProjectsCards::-webkit-scrollbar {
+    display: none;
+}
+
+#ProjectsCards>div:first-child {
+    position: sticky;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ProjectsCards>div:first-child>img {
+    width: 30px;
+}
+
+#ProjectsCards>div:first-child img:hover {
+    cursor: pointer;
+}
+
+#ProjectsCards>div:first-child>img:first-child {
+    margin-left: 15px;
+}
+
+#ProjectsCards>div:first-child>img:last-child {
+    margin-right: 15px;
+    margin-left: 415px;
+    transform: rotate(180deg);
+}
+
+#ProjectsCards>div:not(:first-child) {
     scroll-snap-align: start;
     flex: 0 0 auto;
-    width: 500px;
-    height: 500px;
+    width: var(--size);
+    height: var(--size);
 }
 
-.block:nth-of-type(3)>div:first-child>div:nth-child(1) {
+#ProjectsCards>div:nth-child(2) {
     background-color: red;
 }
 
-.block:nth-of-type(3)>div:first-child>div:nth-child(2) {
+#ProjectsCards>div:nth-child(3) {
     background-color: rgb(149, 0, 0);
 }
 
-.block:nth-of-type(3)>div:first-child>div:nth-child(3) {
+#ProjectsCards>div:nth-child(4) {
     background-color: rgb(98, 0, 0);
 }
 
-.block:nth-of-type(3)>div:first-child>div:nth-child(4) {
+#ProjectsCards>div:nth-child(5) {
     background-color: rgb(0, 0, 0);
+}
+
+
+@media only screen and (max-width: 843px) {
+    #ProjectsCards {
+        --size: 300px;
+    }
+
+    #ProjectsCards>div:first-child>img:last-child {
+        margin-left: 215px;
+    }
 }
