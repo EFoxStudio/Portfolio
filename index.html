@@ -33,13 +33,13 @@
     </div>
 
     <main id="MainPage" onscroll="MainScrolled()">
-        <div class="block top">
+        <div class="block" id="Top">
 
             <header>
                 <a href="https://efox.com.pl">EFox</a>
-                <a href="https://efox.com.pl">Kontakt</a>
-                <a href="https://efox.com.pl">Projekty</a>
-                <a href="https://efox.com.pl">O mnie</a>
+                <a href="#">Usługi</a>
+                <a href="#Projects">Projekty</a>
+                <a href="#About">O mnie</a>
             </header>
 
             <div>
@@ -60,7 +60,7 @@
         </div>
 
 
-        <div class="block">
+        <div class="block" id="About">
             <div><img src="img/ja.jpg" alt="ja">
                 <div></div>
                 <div></div>
@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <div class="block">
+        <div class="block" id="Projects">
             <div id="ProjectsCards">
                 <!-- arrows -->
                 <div>
@@ -87,17 +87,20 @@
                 <div>
                     <h3>Notatnik</h3>
                     <p>Strona internetowa i aplikacja mobilna</p>
-                    <img onclick="window.location.href='https://efox.com.pl'" src="img/notatnik.png" alt="notatnik">
+                    <img onclick="window.location.href='https://notatnik.projectsclassf.pl'" src="img/notatnik.png"
+                        alt="notatnik">
                 </div>
                 <div>
                     <h3>Strona na zlecenie</h3>
                     <p>Strona internetowa</p>
-                    <img onclick="window.location.href='https://efox.com.pl'" src="img/psycholog.png" alt="psycholog">
+                    <img onclick="window.location.href='http://www.psycholog-psychoterapeuta.eu'"
+                        src="img/psycholog.png" alt="psycholog">
                 </div>
                 <div>
                     <h3>Knife</h3>
                     <p>Gra na telefon</p>
-                    <img onclick="window.location.href='https://efox.com.pl'" src="img/knife.png" alt="knife">
+                    <img onclick="window.location.href='https://play.google.com/store/apps/details?id=knife.EFoxStudio.com.unity.template.mobile2D'"
+                        src="img/knife.png" alt="knife">
                 </div>
 
             </div>
@@ -105,9 +108,13 @@
                 <h2>Moje projekty</h2>
                 <div></div>
                 <div></div>
-                <p>Kliknij na wybrany projekt aby zobaczyć więcej informacji
+                <p>Przewiń w lewo lub w prawo i kliknij na wybrany projekt aby zobaczyć więcej informacji
                 </p>
             </div>
+        </div>
+
+        <div class="block" id="Services">
+
         </div>
 
     </main>

@@ -121,6 +121,7 @@ header>a:hover {
 main {
     height: 100vh;
 
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -140,16 +141,16 @@ main {
 
 /* TOP */
 
-.top {
+#Top {
     color: var(--white);
 }
 
-.top>header {
+#Top>header {
     font-size: 25px;
     line-height: 80px;
 }
 
-.top>header>a {
+#Top>header>a {
     margin-inline: 35px;
 
     animation-name: headerFadeIn;
@@ -157,34 +158,29 @@ main {
     animation-iteration-count: 1;
 }
 
-.top>header>a:not(:first-of-type) {
+#Top>header>a:not(:first-of-type) {
     float: right;
 }
 
-.top>header>a:first-of-type {
+#Top>header>a:first-of-type {
     font-size: 40px;
 }
 
 
 @keyframes headerFadeIn {
-
     0% {
         opacity: 0;
 
     }
 
-
-
     70% {
         opacity: 0;
     }
-
-
 }
 
 
 
-.top>div:first-of-type {
+#Top>div:first-of-type {
     position: absolute;
 
     top: 50%;
@@ -200,7 +196,7 @@ main {
     z-index: 10;
 }
 
-.top>div:first-of-type>img {
+#Top>div:first-of-type>img {
     width: 200px;
 
     animation-name: logoAppear;
@@ -209,26 +205,26 @@ main {
     z-index: 1;
 }
 
-.top>div:first-of-type>div {
+#Top>div:first-of-type>div {
     margin-left: 25px;
     overflow: hidden;
     width: 195.59px;
     height: 262.28px;
 }
 
-.top>div:first-of-type>div>h1,
-.top>div:first-of-type>div>h2 {
+#Top>div:first-of-type>div>h1,
+#Top>div:first-of-type>div>h2 {
     animation-name: TextAppear;
     animation-duration: 3s;
     animation-iteration-count: 1;
 }
 
-.top>div:first-of-type>div>h1 {
+#Top>div:first-of-type>div>h1 {
     font-size: 80px;
     margin-bottom: 0px;
 }
 
-.top>div:first-of-type>div>h2 {
+#Top>div:first-of-type>div>h2 {
     font-size: 30px;
     margin-top: 0px;
 }
@@ -262,7 +258,7 @@ main {
 }
 
 /* scroll box */
-.top>div:last-child {
+#Top>div:last-child {
     position: absolute;
     bottom: 0%;
     left: 50%;
@@ -296,11 +292,11 @@ main {
     animation-iteration-count: 1;
 }
 
-.top>div:last-child>div:last-child {
+#Top>div:last-child>div:last-child {
     flex-grow: 1;
 }
 
-.top>div:last-child>div>hr {
+#Top>div:last-child>div>hr {
     width: 80%;
     margin-left: 12px;
 
@@ -339,11 +335,11 @@ main {
 
 
 @media only screen and (max-width: 843px) {
-    .top>div {
+    #Top>div {
         flex-direction: column;
     }
 
-    .top>div>div {
+    #Top>div>div {
         margin-left: 0px;
     }
 
@@ -370,12 +366,12 @@ main {
         }
     }
 
-    .top>div:last-child {
+    #Top>div:last-child {
         left: 90%;
 
     }
 
-    .top>header>a {
+    #Top>header>a {
         display: none;
     }
 
@@ -384,35 +380,36 @@ main {
 
 /* ABOUT BLOCK */
 
-.block:nth-of-type(2) {
+#About {
     color: var(--white);
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
 }
 
 
 
+
 /* image part */
-.block:nth-of-type(2)>div {
+#About>div {
     flex-grow: 1;
     flex-basis: 35%;
     margin-inline: 80px;
     min-width: 200px;
     text-align: center;
+    margin-bottom: 0px;
 }
 
-.block:nth-of-type(2)>div:first-child {
+#About>div:first-child {
     --height: 400px;
     --width: 250px;
     position: relative;
     height: var(--height);
 }
 
-.block:nth-of-type(2)>div:first-child>img {
+#About>div:first-child>img {
     position: absolute;
     top: 0%;
     left: 50%;
@@ -425,7 +422,7 @@ main {
     border-radius: 15px;
 }
 
-.block:nth-of-type(2)>div:first-child>div:nth-of-type(1) {
+#About>div:first-child>div:nth-of-type(1) {
     position: absolute;
     top: 0%;
     left: 50%;
@@ -439,7 +436,7 @@ main {
     border-radius: 15px;
 }
 
-.block:nth-of-type(2)>div:first-child>div:nth-of-type(2) {
+#About>div:first-child>div:nth-of-type(2) {
     position: absolute;
     top: 85%;
     left: 50%;
@@ -456,16 +453,19 @@ main {
 
 /* text part */
 
-.block:nth-of-type(2)>div:last-child {
-    margin-top: 5px;
+#About>div:last-child {
+    margin-top: 0px;
+    margin-bottom: 55px;
+    width: 250px;
+    height: 250px;
 }
 
-.block:nth-of-type(2)>div:last-child>h2 {
+#About>div:last-child>h2 {
     font-size: 100px;
     margin-block: 0;
 }
 
-.block:nth-of-type(2)>div:last-child>div:nth-of-type(1) {
+#About>div:last-child>div:nth-of-type(1) {
 
     background-color: var(--orange);
     box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
@@ -479,7 +479,7 @@ main {
     border-radius: 100px;
 }
 
-.block:nth-of-type(2)>div:last-child>div:nth-of-type(2) {
+#About>div:last-child>div:nth-of-type(2) {
 
     background-color: var(--orange);
     box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
@@ -496,13 +496,13 @@ main {
     border-radius: 100px;
 }
 
-.block:nth-of-type(2)>div:last-child>p {
+#About>div:last-child>p {
     font-size: 25px;
     clear: both;
 }
 
-.block:nth-of-type(2)>div:last-child>a,
-.block:nth-of-type(2)>div:last-child>a:visited {
+#About>div:last-child>a,
+#About>div:last-child>a:visited {
     font-size: 25px;
     clear: both;
     border: 5px solid var(--orange);
@@ -514,21 +514,21 @@ main {
     transition: 0.4s;
 }
 
-.block:nth-of-type(2)>div:last-child>a:hover {
+#About>div:last-child>a:hover {
     border: 5px solid var(--white);
     color: var(--white);
     padding-inline: 20px;
 }
 
 @media only screen and (max-width: 843px) {
-    .block:nth-of-type(2)>div:first-child {
+    #About>div:first-child {
         --height: 300px;
         --width: 200px;
         position: relative;
         height: var(--height);
     }
 
-    .block:nth-of-type(2)>div:first-child>div:nth-of-type(2) {
+    #About>div:first-child>div:nth-of-type(2) {
         position: absolute;
         top: 80%;
         left: 50%;
@@ -542,18 +542,18 @@ main {
 
     }
 
-    .block:nth-of-type(2)>div:last-child>h2 {
+    #About>div:last-child>h2 {
         font-size: 50px;
     }
 
-    .block:nth-of-type(2)>div:last-child>p {
+    #About>div:last-child>p {
         font-size: 15px;
         clear: both;
     }
 }
 
 
-.block:nth-of-type(3) {
+#Projects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -561,7 +561,8 @@ main {
 
 }
 
-.block:nth-of-type(3)>div {
+/* projects */
+#Projects>div {
     width: 500px;
     margin-inline: auto;
 }
@@ -588,6 +589,7 @@ main {
     display: none;
 }
 
+/* projects scroll menu */
 #ProjectsCards>div:first-child {
     position: sticky;
     top: 0%;
@@ -624,6 +626,7 @@ main {
     transform: rotate(180deg) translateX(-18%);
 }
 
+/* scroll menu cards */
 #ProjectsCards>div:not(:first-child) {
     scroll-snap-align: start;
     flex: 0 0 auto;
@@ -681,15 +684,20 @@ main {
 
 @media only screen and (max-width: 843px) {
     #ProjectsCards {
-        --size: 200px;
+        --size: 90vw;
     }
 
-    #ProjectsCards>div:first-child>img:last-child {
-        margin-left: 115px;
+    #ProjectsCards>div:not(:first-child)>h3 {
+        font-size: 10vw;
+    }
+
+    #ProjectsCards>div:not(:first-child)>p {
+        font-size: 5vw;
+        margin-top: 0;
     }
 
     #ProjectsCards>div:not(:first-child)>img {
-        height: 50px;
+        height: 30vw;
         margin-top: 10px;
         object-fit: contain;
     }
@@ -697,18 +705,18 @@ main {
 
 /* projects text */
 
-.block:nth-of-type(3)>div:last-child {
+#Projects>div:last-child {
     margin-top: 5px;
     color: var(--white);
     text-align: center;
 }
 
-.block:nth-of-type(3)>div:last-child>h2 {
+#Projects>div:last-child>h2 {
     font-size: 80px;
     margin-block: 10px;
 }
 
-.block:nth-of-type(3)>div:last-child>div:nth-of-type(1) {
+#Projects>div:last-child>div:nth-of-type(1) {
 
     background-color: var(--orange);
     box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
@@ -722,7 +730,7 @@ main {
     border-radius: 100px;
 }
 
-.block:nth-of-type(3)>div:last-child>div:nth-of-type(2) {
+#Projects>div:last-child>div:nth-of-type(2) {
 
     background-color: var(--orange);
     box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
@@ -739,7 +747,7 @@ main {
     border-radius: 100px;
 }
 
-.block:nth-of-type(3)>div:last-child>p {
+#Projects>div:last-child>p {
     font-size: 25px;
     clear: both;
 }
@@ -750,24 +758,12 @@ main {
         display: none;
     }
 
-    #ProjectsCards>div:not(:first-child)>h3 {
-        font-size: 25px;
-        margin-bottom: 0;
-    }
-
-    #ProjectsCards>div:not(:first-child)>p {
-        font-size: 12px;
-        margin-top: 0;
-    }
-
-    .block:nth-of-type(3)>div:last-child>h2 {
+    #Projects>div:last-child>h2 {
         font-size: 50px;
     }
 
-    .block:nth-of-type(3)>div:last-child>p {
+    #Projects>div:last-child>p {
         font-size: 15px;
         clear: both;
     }
-
-
 }
