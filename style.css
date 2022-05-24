@@ -648,16 +648,20 @@ main {
     margin-top: 0;
 }
 
-#ProjectsCards>div:not(:first-child)>img {
-    height: 150px;
+#ProjectsCards>div:not(:first-child)>a {
     margin-top: 50px;
-    object-fit: contain;
     position: absolute;
     transform: translateX(-50%);
     z-index: 50;
 }
 
-#ProjectsCards>div:not(:first-child)>img:hover {
+#ProjectsCards>div:not(:first-child)>a>img {
+    height: 150px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+#ProjectsCards>div:not(:first-child)>a:hover {
     cursor: pointer;
 }
 
