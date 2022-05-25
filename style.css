@@ -135,6 +135,8 @@ main {
     width: 100vw;
     height: 100vh;
 
+    overflow-y: hidden;
+
     scroll-snap-align: start;
 }
 
@@ -258,7 +260,7 @@ main {
 }
 
 /* scroll box */
-#Top>div:last-child {
+#ScrollDown {
     position: absolute;
     bottom: 0%;
     left: 50%;
@@ -276,6 +278,7 @@ main {
     flex-direction: row;
     align-items: center;
 
+    transition: 1s;
     animation-name: ScrollAppear;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -287,9 +290,7 @@ main {
 
     opacity: 0;
 
-    animation-name: ScrollHide;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
+    margin-bottom: -100px;
 }
 
 #Top>div:last-child>div:last-child {
@@ -317,18 +318,6 @@ main {
     90% {
         opacity: 1;
         margin-bottom: 0px;
-    }
-}
-
-@keyframes ScrollHide {
-
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        margin-bottom: -100px;
     }
 }
 
@@ -563,7 +552,6 @@ main {
 
 /* projects */
 #Projects>div {
-    width: 500px;
     margin-inline: auto;
 }
 
@@ -673,22 +661,14 @@ main {
     background-color: #bae2b4;
 }
 
-#ProjectsCards>div:nth-child(3)>img {
-    border-radius: 15px;
-}
-
 #ProjectsCards>div:nth-child(4) {
     background-color: #fea500;
-}
-
-#ProjectsCards>div:nth-child(4)>img {
-    border-radius: 15px;
 }
 
 
 @media only screen and (max-width: 843px) {
     #ProjectsCards {
-        --size: 90vw;
+        --size: 85vw;
     }
 
     #ProjectsCards>div:not(:first-child)>h3 {
@@ -700,7 +680,11 @@ main {
         margin-top: 0;
     }
 
-    #ProjectsCards>div:not(:first-child)>img {
+    #ProjectsCards>div:not(:first-child)>a {
+        margin-top: 1vh;
+    }
+
+    #ProjectsCards>div:not(:first-child)>a>img {
         height: 30vw;
         margin-top: 10px;
         object-fit: contain;

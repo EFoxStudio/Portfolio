@@ -49,6 +49,15 @@ function CurrentPageIndicator() {
             currentPageIndicator = newIndicator;
         }
     }
+
+    if ((topDistance >= windowHeight * 3) && (topDistance < windowHeight * 4)) {
+        var newIndicator = allNodes.item(3);
+        if (!(newIndicator.id == "currentPageIndicator")) {
+            currentPageIndicator.removeAttribute('id');
+            newIndicator.id = "currentPageIndicator";
+            currentPageIndicator = newIndicator;
+        }
+    }
 }
 
 
