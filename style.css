@@ -777,7 +777,8 @@ main {
 
 
 
-#Services>div {
+#Services>div 
+{
     flex-grow: 1;
     flex-basis: 35%;
     margin-inline: 80px;
