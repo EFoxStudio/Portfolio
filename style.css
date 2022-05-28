@@ -12,6 +12,7 @@
 
 :root {
     --black: #1a1a1a;
+    --deepBlack: #111111;
     --white: #f0f8ff;
     --grey: #b0b0b0;
     --orange: #e9631b;
@@ -135,7 +136,7 @@ main {
     width: 100vw;
     height: 100vh;
 
-    overflow-y: hidden;
+    overflow: hidden;
 
     scroll-snap-align: start;
 }
@@ -324,7 +325,7 @@ main {
 
 
 @media only screen and (max-width: 843px) {
-    #Top>div {
+    #Top>div:not(:last-child) {
         flex-direction: column;
     }
 
@@ -355,7 +356,7 @@ main {
         }
     }
 
-    #Top>div:last-child {
+    #ScrollDown {
         left: 90%;
 
     }
@@ -541,6 +542,7 @@ main {
     }
 }
 
+/* PROJECTSS BLOCKS */
 
 #Projects {
     display: flex;
@@ -751,6 +753,160 @@ main {
     }
 
     #Projects>div:last-child>p {
+        font-size: 15px;
+        clear: both;
+    }
+}
+
+
+/* SERVICES */
+
+
+
+
+#Services {
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+
+
+#Services>div {
+    flex-grow: 1;
+    flex-basis: 35%;
+    margin-inline: 80px;
+    min-width: 200px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* FORM */
+
+
+#Services>div:first-child>form {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    font-size: 20px;
+    height: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+#Services>div:first-child>form>input,
+#Services>div:first-child>form>textarea {
+    margin-block: 25px;
+
+    background-color: var(--deepBlack);
+    color: var(--white);
+
+    border: none;
+    border-radius: 10px;
+
+    min-height: 30px;
+    width: 100%;
+
+}
+
+#Services>div:first-child>form>input[type=submit] {
+    color: var(--deepBlack);
+    font-weight: bold;
+    background-color: var(--orange);
+    width: 100px;
+    margin-inline: auto;
+}
+
+
+
+
+
+/* text part */
+
+#Services>div:last-child {
+    margin-top: 0px;
+    margin-bottom: 55px;
+    width: 250px;
+    height: 250px;
+}
+
+#Services>div:last-child>h2 {
+    font-size: 100px;
+    margin-block: 15px;
+}
+
+#Services>div:last-child>div:nth-of-type(1) {
+
+    background-color: var(--orange);
+    box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
+
+    width: 150px;
+    height: 10px;
+
+    transform: translateX(30%);
+    margin-inline: auto;
+
+    border-radius: 100px;
+}
+
+#Services>div:last-child>div:nth-of-type(2) {
+
+    background-color: var(--orange);
+    box-shadow: 8px 13px 37px -12px rgba(0, 0, 0, 1);
+
+    width: 150px;
+    height: 10px;
+
+    margin-inline: auto;
+    transform: translateX(-30%);
+    margin-top: 15px;
+
+    clear: both;
+
+    border-radius: 100px;
+}
+
+#Services>div:last-child>p {
+    font-size: 25px;
+    clear: both;
+}
+
+#Services>div:last-child>a,
+#Services>div:last-child>a:visited {
+    font-size: 25px;
+    clear: both;
+    border: 5px solid var(--orange);
+    color: var(--orange);
+    border-radius: 10px;
+    padding-block: 5px;
+    padding-inline: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+#Services>div:last-child>a:hover {
+    border: 5px solid var(--white);
+    color: var(--white);
+    padding-inline: 20px;
+}
+
+@media only screen and (max-width: 843px) {
+
+    #Services>div:first-child>form>input,
+    #Services>div:first-child>form>textarea {
+        margin-block: 15px;
+    }
+
+    #Services>div:last-child>h2 {
+        font-size: 50px;
+    }
+
+    #Services>div:last-child>p {
         font-size: 15px;
         clear: both;
     }
