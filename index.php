@@ -121,6 +121,9 @@
             <div>
                 <form method="post">
 
+                    <label for="name">Twoje Imię i Nazwisko</label>
+                    <input type="text" name="name" id="name" required>
+
                     <label for="email">Twój e-mail</label>
                     <input type="text" name="email" id="email" required>
 
@@ -151,6 +154,42 @@
 
 
     <script src="main.js"></script>
+
+    <?php
+
+        if(isset($_POST['submit']))
+        {
+            require_once('class.phpmailer.php');    //dodanie klasy phpmailer
+            require_once('class.smtp.php');    //dodanie klasy smtp
+            $mail = new PHPMailer();    //utworzenie nowej klasy phpmailer
+            $mail->From = "SMTP@efox.com.pl";    //adres e-mail użyty do wysyłania wiadomości
+            $mail->FromName = $_POST['name'];    //imię i nazwisko lub nazwa użyta do wysyłania wiadomości
+            $mail->AddReplyTo($_POST['email'], $_POST['name']); //adres e-mail nadawcy oraz jego nazwa
+                                                        //w polu "Odpowiedz do"  
+            $mail->Host = "smtp.webio.pl";    //adres serwera SMTP wysyłającego e-mail
+            $mail->Mailer = "smtp";    //do wysłania zostanie użyty serwer SMTP
+            $mail->SMTPAuth = true;    //włączenie autoryzacji do serwera SMTP
+            $mail->Username = "SMTP@efox.com.pl";    //nazwa użytkownika do skrzynki e-mail
+            $mail->Password = "853MW2z2x!1";    //hasło użytkownika do skrzynki e-mail
+            $mail->Port = 465; //port serwera SMTP zależny od konfiguracji dostawcy usługi poczty
+            $mail->Subject = $_POST['topic'];    //Temat wiadomości, można stosować zmienne i znaczniki HTML
+            $mail->Body = $_POST['mess'];    //Treść wiadomości, można stosować zmienne i znaczniki HTML     
+            $mail->AddAddress ("elementalsfox@gmail.com","EFox");    //adres skrzynki e-mail oraz nazwa
+                                                //adresata, do którego trafi wiadomość
+            if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
+                {                      
+                echo 'E-mail został wysłany'; //wyświetl ten komunikat
+                }            
+            else    //w przeciwnym wypadku
+                {           
+                echo 'E-mail nie mógł zostać wysłany';    //wyświetl następujący
+                }
+        } 
+
+
+    ?>
+
+
 </body>
 
 </html>
