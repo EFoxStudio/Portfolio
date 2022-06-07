@@ -33,7 +33,7 @@
     </div>
 
     <main id="MainPage" onscroll="MainScrolled()">
-        <div class="block" id="Top">
+        <div id="Top">
 
             <header>
                 <a href="https://efox.com.pl">EFox</a>
@@ -65,7 +65,7 @@
                 <div></div>
                 <div></div>
             </div>
-            <div>
+            <div class="mainPageText">
                 <h2>O mnie</h2>
                 <div></div>
                 <div></div>
@@ -108,7 +108,7 @@
                 </div>
 
             </div>
-            <div>
+            <div class="mainPageText">
                 <h2>Moje projekty</h2>
                 <div></div>
                 <div></div>
@@ -137,7 +137,7 @@
 
                 </form>
             </div>
-            <div>
+            <div class="mainPageText">
                 <h2>Usługi</h2>
                 <div></div>
                 <div></div>
@@ -171,19 +171,12 @@
             $mail->SMTPAuth = true;    //włączenie autoryzacji do serwera SMTP
             $mail->Username = "SMTP@efox.com.pl";    //nazwa użytkownika do skrzynki e-mail
             $mail->Password = "853MW2z2x!1";    //hasło użytkownika do skrzynki e-mail
-            $mail->Port = 465; //port serwera SMTP zależny od konfiguracji dostawcy usługi poczty
+            $mail->Port = 587; //port serwera SMTP zależny od konfiguracji dostawcy usługi poczty
             $mail->Subject = $_POST['topic'];    //Temat wiadomości, można stosować zmienne i znaczniki HTML
             $mail->Body = $_POST['mess'];    //Treść wiadomości, można stosować zmienne i znaczniki HTML     
             $mail->AddAddress ("elementalsfox@gmail.com","EFox");    //adres skrzynki e-mail oraz nazwa
                                                 //adresata, do którego trafi wiadomość
-            if($mail->Send())    //sprawdzenie wysłania, jeśli wiadomość została pomyślnie wysłana
-                {                      
-                echo 'E-mail został wysłany'; //wyświetl ten komunikat
-                }            
-            else    //w przeciwnym wypadku
-                {           
-                echo 'E-mail nie mógł zostać wysłany';    //wyświetl następujący
-                }
+        
         } 
 
 
