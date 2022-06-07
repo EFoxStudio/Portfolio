@@ -65,13 +65,17 @@
                 <div></div>
                 <div></div>
             </div>
-            <div class="mainPageText">
-                <h2>O mnie</h2>
+            <div class="mainPageText hide">
+                <div>
+                    <h2>O mnie</h2>
+                </div>
                 <div></div>
                 <div></div>
-                <p>Jestem programistą. Najbardziej lubię język C#.<br>Trenuję wspinaczkę, interesuję się kosmosem i
-                    robotyką
-                </p>
+                <div>
+                    <p>Jestem programistą. Najbardziej lubię język C#.<br>Trenuję wspinaczkę, interesuję się kosmosem i
+                        robotyką
+                    </p>
+                </div>
                 <a href="about.html">Więcej</a>
             </div>
         </div>
@@ -108,12 +112,16 @@
                 </div>
 
             </div>
-            <div class="mainPageText">
-                <h2>Moje projekty</h2>
+            <div class="mainPageText hide">
+                <div>
+                    <h2>Moje projekty</h2>
+                </div>
                 <div></div>
                 <div></div>
-                <p>Przewiń w lewo lub w prawo.<br> Kliknij na wybrany projekt aby zobaczyć więcej informacji
-                </p>
+                <div>
+                    <p>Przewiń w lewo lub w prawo.<br> Kliknij na wybrany projekt aby zobaczyć więcej informacji
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -137,13 +145,17 @@
 
                 </form>
             </div>
-            <div class="mainPageText">
-                <h2>Usługi</h2>
+            <div class="mainPageText hide">
+                <div>
+                    <h2>Usługi</h2>
+                </div>
                 <div></div>
                 <div></div>
-                <p>Jeśli potrzebujesz strony internetowej napisz do mnie e-mail. Więcj szczegółów znajdziesz pod
-                    przyciskiem usługi.
-                </p>
+                <div>
+                    <p>Jeśli potrzebujesz strony internetowej napisz do mnie e-mail. Więcj szczegółów znajdziesz pod
+                        przyciskiem usługi.
+                    </p>
+                </div>
                 <a href="pages/services.html">Usługi</a>
             </div>
         </div>
