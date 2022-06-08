@@ -3,28 +3,6 @@
 function MainScrolled() {
     HideScrollBox();
     CurrentPageIndicator();
-    MainPageTextAnimation();
-}
-
-function MainPageTextAnimation() { 
-    var main = document.getElementById("MainPage");
-    var topDistance = main.scrollTop;
-    var mainTextBoxes = document.getElementsByClassName('mainPageText');
-    console.log("top distance" + topDistance);
-    
-    
-    for (const current of mainTextBoxes) {
-        var textTop = window.pageYOffset + current.getBoundingClientRect().top
-        if (topDistance > textTop) {
-            if (current.classList.contains("hide")) {
-                current.classList.remove("hide");
-            }
-        }
-        
-        if(topDistance<=textTop)
-        current.classList.add("hide");
-    }
-
 }
 
 

@@ -65,7 +65,7 @@
                 <div></div>
                 <div></div>
             </div>
-            <div class="mainPageText hide">
+            <div class="mainPageText">
                 <div>
                     <h2>O mnie</h2>
                 </div>
@@ -76,7 +76,7 @@
                         robotyką
                     </p>
                 </div>
-                <a href="about.html">Więcej</a>
+                <!-- <a href="pages/about.html">Więcej</a> -->
             </div>
         </div>
 
@@ -112,7 +112,7 @@
                 </div>
 
             </div>
-            <div class="mainPageText hide">
+            <div class="mainPageText">
                 <div>
                     <h2>Moje projekty</h2>
                 </div>
@@ -145,7 +145,7 @@
 
                 </form>
             </div>
-            <div class="mainPageText hide">
+            <div class="mainPageText">
                 <div>
                     <h2>Usługi</h2>
                 </div>
@@ -156,7 +156,7 @@
                         przyciskiem usługi.
                     </p>
                 </div>
-                <a href="pages/services.html">Usługi</a>
+                <!-- <a href="pages/services.html">Usługi</a> -->
             </div>
         </div>
 
